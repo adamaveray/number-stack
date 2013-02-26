@@ -14,6 +14,13 @@ class Stack implements \Interfaces\Stack {
 	}
 
 	public function pop(){
+		if(!isset($this->top)){
+			throw new \OutOfRangeException('Stack is empty');
+		}
 
+		$item	= $this->top;
+		$this->top	= $item->get_next();
+
+		return $item;
 	}
 };
