@@ -7,6 +7,6 @@ class NumberNode extends Node implements \Interfaces\NumberNode {
 	}
 
 	public function set_next_highest(\Interfaces\NumberNode &$node){
-		$this->next_highest	= $next_highest;
+		$this->next_highest	= $node;
 	}
 };
