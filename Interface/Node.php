@@ -1,4 +1,6 @@
 <?php
+namespace Interfaces;
+
 interface Node {
 	public function &get_next();
 
