@@ -24,6 +24,17 @@ class NumberStack extends Stack implements \Interfaces\NumberStack {
 		}
 	}
 
+	public function pop(){
+		$item	= parent::pop();
+
+		if($item === $this->highest){
+			// Popping highest - update
+			$this->highest	= $this->highest->get_next_highest();
+		}
+
+		return $item;
+	}
+
 	public function get_highest(){
 		if(!isset($this->highest)){
 			throw new \OutOfRangeException('Stack is empty');
