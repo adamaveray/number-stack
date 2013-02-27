@@ -2,5 +2,5 @@
 namespace Interfaces;
 
 interface NumberStack extends Stack {
-	public function get_highest();
+	public function peek_highest();
 };

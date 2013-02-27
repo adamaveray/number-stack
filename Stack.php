@@ -23,4 +23,8 @@ class Stack implements \Interfaces\Stack {
 
 		return $item;
 	}
+
+	public function peek(){
+		return $this->top;
+	}
 };
