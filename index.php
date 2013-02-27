@@ -13,13 +13,9 @@ function demo_stack(){
 		$stack->push(new \Node($item));
 	}
 
-	try {
-		foreach($stack as $node){
-			echo 'Peek ( '.$node->get_value().' )'.PHP_EOL;
-		}
-	} catch(\Exception $e){}
-
-	echo $stack.PHP_EOL;
+	echo PHP_EOL;
+	echo 'Stack: '.$stack.PHP_EOL;
+	echo PHP_EOL;
 
 	try {
 		while(true){
@@ -44,15 +40,9 @@ function demo_number_stack(){
 		$stack->push(new \Node($item));
 	}
 
-	echo 'Highest: '.$stack->peek_highest()->get_value().PHP_EOL;
-	
-	try {
-		foreach($stack as $node){
-			echo 'Peek ( '.$node->get_value().' )'.PHP_EOL;
-		}
-	} catch(\Exception $e){}
-	
-	echo $stack.PHP_EOL;
+	echo PHP_EOL;
+	echo 'Stack: '.$stack.PHP_EOL;
+	echo PHP_EOL;
 
 	try {
 		while(true){
