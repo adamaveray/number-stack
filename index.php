@@ -14,6 +14,12 @@ function demo_stack(){
 	}
 
 	try {
+		foreach($stack as $node){
+			echo 'Peek ( '.$node->get_value().' )'.PHP_EOL;
+		}
+	} catch(\Exception $e){}
+
+	try {
 		while(true){
 			echo 'Pop ( '.$stack->pop()->get_value().' )'.PHP_EOL;
 		}
@@ -31,6 +37,12 @@ function demo_number_stack(){
 	}
 
 	echo 'Highest: '.$stack->peek_highest()->get_value().PHP_EOL;
+	
+	try {
+		foreach($stack as $node){
+			echo 'Peek ( '.$node->get_value().' )'.PHP_EOL;
+		}
+	} catch(\Exception $e){}
 
 	try {
 		while(true){
