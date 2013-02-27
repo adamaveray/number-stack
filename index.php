@@ -7,7 +7,7 @@ spl_autoload_register(function($class){
 function demo_stack(){
 	$items	= array(10, 2, 5, 8, 1, 7);
 
-	$stack	= new \NumberStack();
+	$stack	= new \Stack();
 	echo 'Pushing'.PHP_EOL;
 	foreach($items as $item){
 		echo $item.' , ';
@@ -21,3 +21,5 @@ function demo_stack(){
 		}
 	} catch(\Exception $e){}
 }
+
+demo_stack();
