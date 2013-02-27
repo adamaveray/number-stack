@@ -42,4 +42,9 @@ class NumberStack extends Stack implements \Interfaces\NumberStack {
 
 		return $this->highest;
 	}
+
+
+	public function __toString(){
+		return parent::__toString().' (Highest: '.$this->peek_highest()->get_value().')';
+	}
 };
