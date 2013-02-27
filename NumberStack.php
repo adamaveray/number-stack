@@ -1,5 +1,8 @@
 <?php
 class NumberStack extends Stack implements \Interfaces\NumberStack {
+	/**
+	 * @var \Interfaces\NumberNode
+	 */
 	protected $highest;
 
 	public function push(\Interfaces\Node $item){
