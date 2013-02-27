@@ -30,7 +30,7 @@ function demo_number_stack(){
 		$stack->push(new \Node($item));
 	}
 
-	echo 'Highest: '.$stack->get_highest()->get_value().PHP_EOL;
+	echo 'Highest: '.$stack->peek_highest()->get_value().PHP_EOL;
 
 	try {
 		while(true){

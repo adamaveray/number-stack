@@ -35,7 +35,7 @@ class NumberStack extends Stack implements \Interfaces\NumberStack {
 		return $item;
 	}
 
-	public function get_highest(){
+	public function peek_highest(){
 		if(!isset($this->highest)){
 			throw new \OutOfRangeException('Stack is empty');
 		}
