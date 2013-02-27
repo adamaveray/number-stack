@@ -19,6 +19,8 @@ function demo_stack(){
 		}
 	} catch(\Exception $e){}
 
+	echo $stack.PHP_EOL;
+
 	try {
 		while(true){
 			echo 'Pop ( '.$stack->pop()->get_value().' )'.PHP_EOL;
@@ -43,6 +45,8 @@ function demo_number_stack(){
 			echo 'Peek ( '.$node->get_value().' )'.PHP_EOL;
 		}
 	} catch(\Exception $e){}
+	
+	echo $stack.PHP_EOL;
 
 	try {
 		while(true){

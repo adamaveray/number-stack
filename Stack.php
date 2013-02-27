@@ -29,6 +29,22 @@ class Stack implements \Interfaces\Stack, \Iterator {
 	}
 
 
+	public function __toArray(){
+		$items	= array();
+		
+		foreach($this as $node){
+			$items[]	= $node->get_value();
+		}
+		return $items;
+	}
+
+	public function __toString(){
+		$items	= $this->__toArray();
+
+		return implode(', ', $items);
+	}
+
+
 	/* Iterator */
 	protected $iterator_position	= 0;
 	protected $iterator_item;
