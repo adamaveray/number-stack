@@ -40,9 +40,11 @@ class NumberStack extends Stack implements \Interfaces\NumberStack {
 			throw new \OutOfRangeException('Stack is empty');
 		}
 
-		$item	= $this->highest;
-		$this->highest	= $item->get_next_highest();
+		return $this->highest;
+	}
 
-		return $item;
+
+	public function __toString(){
+		return parent::__toString().' (Highest: '.$this->peek_highest()->get_value().')';
 	}
 };

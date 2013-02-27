@@ -13,6 +13,10 @@ function demo_stack(){
 		$stack->push(new \Node($item));
 	}
 
+	echo PHP_EOL;
+	echo 'Stack: '.$stack.PHP_EOL;
+	echo PHP_EOL;
+
 	try {
 		while(true){
 			echo 'Pop ( '.$stack->pop()->get_value().' )'.PHP_EOL;
@@ -26,15 +30,30 @@ function demo_number_stack(){
 
 	$stack	= new \NumberStack();
 	foreach($items as $item){
-		echo 'Push ( '.$item.' )'.PHP_EOL;
+		try {
+			$highest	= $stack->peek_highest()->get_value();
+		} catch(\Exception $e){
+			$highest	= 'none';
+		}
+
+		echo 'Push ( '.$item.' )  Highest = '.$highest.PHP_EOL;
 		$stack->push(new \Node($item));
 	}
 
-	echo 'Highest: '.$stack->peek_highest()->get_value().PHP_EOL;
+	echo PHP_EOL;
+	echo 'Stack: '.$stack.PHP_EOL;
+	echo PHP_EOL;
 
 	try {
 		while(true){
-			echo 'Pop ( '.$stack->pop()->get_value().' )'.PHP_EOL;
+			echo 'Pop ( '.$stack->pop()->get_value().' )';
+
+			try {
+				$highest	= $stack->peek_highest()->get_value();
+			} catch(\Exception $e){
+				$highest	= 'none';
+			}
+			echo ' Highest = '.$highest.PHP_EOL;
 		}
 	} catch(\Exception $e){}
 }
