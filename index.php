@@ -8,16 +8,14 @@ function demo_stack(){
 	$items	= array(10, 2, 5, 8, 1, 7);
 
 	$stack	= new \Stack();
-	echo 'Pushing'.PHP_EOL;
 	foreach($items as $item){
-		echo $item.' , ';
+		echo 'Push ( '.$item.' )'.PHP_EOL;
 		$stack->push(new \Node($item));
 	}
 
 	try {
-		echo 'Popping'.PHP_EOL;
 		while(true){
-			echo $stack->pop()->get_value().' , ';
+			echo 'Pop ( '.$stack->pop()->get_value().' )'.PHP_EOL;
 		}
 	} catch(\Exception $e){}
 }
@@ -27,18 +25,16 @@ function demo_number_stack(){
 	$items	= array(5, 10, 2, 5, 12, 1, 13, 2);
 
 	$stack	= new \NumberStack();
-	echo 'Pushing'.PHP_EOL;
 	foreach($items as $item){
-		echo $item.' , ';
+		echo 'Push ( '.$item.' )'.PHP_EOL;
 		$stack->push(new \Node($item));
 	}
 
 	echo 'Highest: '.$stack->get_highest()->get_value().PHP_EOL;
 
 	try {
-		echo 'Popping'.PHP_EOL;
 		while(true){
-			echo $stack->pop()->get_value().' , ';
+			echo 'Pop ( '.$stack->pop()->get_value().' )'.PHP_EOL;
 		}
 	} catch(\Exception $e){}
 }
